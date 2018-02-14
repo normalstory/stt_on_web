@@ -1,0 +1,52 @@
+<html> 
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="/static/css/annyang.css">
+  <script src="/static/speak/min_annyang.js"></script>
+  <script>
+  annyang.debug();
+	var commands = {
+    '다음*val' : function() {
+			location.href = "./a";
+		},
+    '앞*val' : function() {
+			location.href = "./a";
+		},
+    '넥스트*val' : function() {
+			location.href = "./a";
+		},
+    '뒤로*val' : function() {
+			location.href = "./b";
+		},
+    '뒷*val' : function() {
+			location.href = "./b";
+		},
+    '백*val' : function() {
+			location.href = "./b";
+		},
+    '메인*val' : function() {
+			location.href = "./main";
+		}
+	}
+	annyang.addCommands(commands);
+  annyang.start({autoRestart: false, continuous: true});
+  </script> 
+</head> 
+<body class="" id="grid">
+  <div>
+  <div id = "btn_on" onclick="location.href = './b';">
+    뒤로
+  </div>
+  <div id = "btn_off" onclick="location.href = './a';">
+    다음
+  </div>
+  <div id = "btn_on" onclick="location.href = './main';">
+    메인
+  </div> 
+</div> 
+<div id="page_info">
+  C 
+</div> 
+<div id="rec_btn" onclick="annyang.start({autoRestart: false, continuous: true})">record</div> 
+</body> 
+</html>
