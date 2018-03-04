@@ -1,55 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" type="text/css" href="/static/user/css/annyang.css">
-  <script src="/static/user/js/min_annyang_v2.5.0.js"></script>
-  <script>
-	var commands = {
-    '다음*val' : function() {
-			location.href = "./c";
-		},
-    '앞*val' : function() {
-			location.href = "./c";
-		},
-    '넥스트*val' : function() {
-			location.href = "./c";
-		},
-    '뒤로*val' : function() {
-			location.href = "./a";
-		},
-    '뒷*val' : function() {
-			location.href = "./a";
-		},
-    '백*val' : function() {
-			location.href = "./a";
-		},
-    '메인*val' : function() {
-			location.href = "./";
-		}
-	}
-	annyang.addCommands(commands);
-  annyang.start({autoRestart: false, continuous: true});
-  </script>
-</head>
-<body class="" id="grid">
-<div>
-  <div id = "btn_on" onclick="location.href = './a';">
-    뒤로
-  </div>
-  <div id = "btn_on" onclick="location.href = './c';">
-    다음
-  </div>
-  <div id = "btn_on" onclick="location.href = './';">
-    메인
-  </div>
-</div>
+  <head>
+    <title>Speech Recognition for Nivigation_sub page</title>
 
-   <div id="page_info">
-     B
-   </div>
-   <div id="rec_btn" onclick="annyang.start({autoRestart: false, continuous: true})">
-    record
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Speech Recognition, normalstory, chanwoo, service design, mobile, VUI, chatbot" />
+
+    <link rel="stylesheet" type="text/css" href="/static/user/css/annyang.css">
+    <script src="/static/user/js/min_annyang_v2.5.0.js"></script>
+    <script src="/static/user/js/set_b.js"></script>
+  </head>
+
+<body class="" id="grid">
+    <div>
+      <div id = "btn_on" onclick="location.href = './a';">뒤로</div>
+      <div id = "btn_on" onclick="location.href = './c';">다음</div>
+      <div id = "btn_on" onclick="location.href = './';">메인</div>
     </div>
+    <div id="page_info">B</div>
+    <div id="rec_btn" onclick="annyang.start({autoRestart: false, continuous: true})">record</div>
 </body>
 </html>
